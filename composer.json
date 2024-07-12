@@ -1,6 +1,6 @@
 {
   "name": "procket/djob",
-  "description": "A database job library",
+  "description": "A PHP database job library",
   "keywords": [
     "php database job",
     "php database queue"
