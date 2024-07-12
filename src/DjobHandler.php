@@ -1,6 +1,6 @@
 <?php
 
-namespace Pocket\Djob;
+namespace Procket\Djob;
 
 use Exception;
 use stdClass;

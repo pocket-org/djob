@@ -1,6 +1,6 @@
 <?php
 
-namespace Pocket\Djob;
+namespace Procket\Djob;
 
 use Laravel\SerializableClosure\SerializableClosure;
 use Workerman\Worker;

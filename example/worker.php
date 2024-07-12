@@ -1,6 +1,6 @@
 <?php
 
-use Pocket\Djob\Djob;
+use Procket\Djob\Djob;
 
 require __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/TestHandler.php';

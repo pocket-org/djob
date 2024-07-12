@@ -1,5 +1,5 @@
 {
-  "name": "pocket/djob",
+  "name": "procket/djob",
   "description": "A database job library",
   "keywords": [
     "php database job",
@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Pocket\\Djob\\": "src/"
+      "Procket\\Djob\\": "src/"
     }
   },
   "config": {
