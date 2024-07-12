@@ -6,12 +6,6 @@
     "php database queue"
   ],
   "license": "MIT",
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../*"
-    }
-  ],
   "require": {
     "php": "^7.4|^8.0",
     "ext-ctype": "*",
