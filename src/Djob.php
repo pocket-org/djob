@@ -1271,13 +1271,13 @@ class Djob
      * @param string|null $errorLogFile Job error log file path, supports date format characters, see {@see Djob::parseDateString()}.
      * @return void
      */
-    public function start($name = 'Djob', $processNumber = 1, $loopNumber = 500, $handler = null, $errorLogFile = null)
+    public function start($name = 'djob', $processNumber = 1, $loopNumber = 500, $handler = null, $errorLogFile = null)
     {
         if (!is_null($errorLogFile) && !$this->ensureDirectory($dir = dirname($errorLogFile))) {
             throw new RuntimeException("Failed to create the log directory [{$dir}]");
         }
 
-        $this->registerDjobWorker($name, $processNumber, $loopNumber, $handler, $errorLogFile);
+        $this->registerWorker($name, $processNumber, $loopNumber, $handler, $errorLogFile);
 
         if (!defined('START_ALL_WORKERS')) {
             Worker::runAll();
@@ -1294,9 +1294,7 @@ class Djob
      * @param string|null $errorLogFile Job error log file path, supports date format characters, see {@see Djob::parseDateString()}.
      * @return void
      */
-    protected function registerDjobWorker(
-        $name = 'Djob', $processNumber = 1, $loopNumber = 500, $handler = null, $errorLogFile = null
-    )
+    protected function registerWorker($name = 'djob', $processNumber = 1, $loopNumber = 500, $handler = null, $errorLogFile = null)
     {
         /** @noinspection PhpObjectFieldsAreOnlyWrittenInspection */
         $jobWorker = new Worker();
