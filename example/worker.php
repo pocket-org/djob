@@ -9,7 +9,7 @@ $djob = Djob::instance(include __DIR__ . '/connection.php');
 
 if ($djob->isOnWindows()) {
     // Windows for testing purposes only
-    $djob->start(1, null);
+    $djob->start('Djob', 1, null);
 } else {
-    $djob->start(4);
+    $djob->start('Djob', 4);
 }
